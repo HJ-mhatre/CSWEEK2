@@ -1,0 +1,138 @@
+#Sequence of Numbers
+
+```{r}
+x<-seq(1:100)
+print(x)
+
+y<-seq(10,15)
+y
+
+z<-seq(1,9,by=2)
+z
+
+m<-seq(1,12, by = pi)
+m
+
+n<-seq(1.005, 5.251, by=0.05)
+n
+```
+
+#Vectors
+
+```{r}
+Omaha<-c(16,16,8,30)
+Omaha
+
+WIU<-c(22,18,22,16)
+WIU
+
+Omaha[3]
+
+WIU[4]  #to get the 4the element in vector
+
+Omaha[c(2,4)]   #get 2nd and 4th element
+
+WIU[c(1,3)]     #get 1st and 3rd element
+
+Omaha<-NULL #delete a vector
+Omaha
+
+WIU[-1]   #Acces all but first element
+
+```
+
+
+
+
+#Missing values
+
+```{r}
+y <- c(1,2,3,4,5,NA,7,8,9)
+y
+
+
+is.na(y)  #returns TRUE of x is missing
+
+mean(y)   # returns NA
+
+
+
+x<-na.omit(y)  # create new dataset without missing data 
+x
+
+A <- c(39,48,56,NA,66,33,66, NA)
+A
+
+is.na(A)  #returns TRUE of x is missing
+
+mean(A)   # returns NA
+
+
+
+b<-na.omit(A)  # create new dataset without missing data 
+b
+
+
+
+
+
+```
+#Subsetting vectors
+
+```{r}
+letters    #Aplhabets in lower case
+
+letters[15]
+
+
+letters[5:21]
+
+
+head(letters, 5)
+
+tail(letters,10)
+
+
+LETTERS  #Aplhabets in upper case
+
+LETTERS[4]
+
+LETTERS[8:16]
+
+head(LETTERS, 8)
+
+tail(LETTERS, 20)
+
+
+
+```
+
+#Matrices and dataframe
+
+
+```{r}
+a<-matrix(month.abb, nrow = 2, ncol = 6)
+a
+
+b<-matrix(1:9, nrow = 3, ncol = 3)
+b
+
+x <- matrix(11:19, nrow = 3, dimnames = list(c("L","M","N"), c("A","B","C")))
+x
+
+ colnames(x)
+ rownames(x)
+ 
+ colnames(x) <- c("X","Y","Z")
+ colnames(x)
+ 
+ 
+ 
+ col_data<-data.frame(id=c(1:5),name=c("hema","steve","don","Aimee","Yemi"),courses_taken=c(4,3,2,3,4))
+ print(col_data)
+ str(col_data)
+ print(summary(col_data))
+```
+
+
+
